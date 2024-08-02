@@ -1,0 +1,17 @@
+FROM node:18
+
+EXPOSE 8080
+
+WORKDIR /opt/server
+
+ENV MONGO=true
+
+COPY package.json /opt/server
+
+COPY  server.js /opt/server
+
+#Installing dependencies
+
+RUN npm Installing
+
+CMD [ "node", "server.js" ]
