@@ -12,6 +12,7 @@ COPY  server.js /opt/server
 
 #Installing dependencies
 
-RUN npm Installing
+RUN npm install
 
 CMD [ "node", "server.js" ]
+ 
